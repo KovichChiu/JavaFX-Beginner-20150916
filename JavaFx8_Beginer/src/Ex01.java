@@ -1,0 +1,39 @@
+/*
+ * ClassExercise 01 of JavaFx8!
+ * 103021045
+ * ªôàà¤Ò
+ * 20150916 22:08 (save)
+ */
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
+import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+
+public class Ex01 extends Application {
+	@Override 
+	public void start(Stage primaryStage) {
+		Label label = new Label("ªôàà¤Ò 103021045");
+		label.setBackground(new Background(new BackgroundFill(Color.GREEN, CornerRadii.EMPTY, Insets.EMPTY)));	//Setting label colors
+		
+		StackPane root = new StackPane();
+		root.getChildren().add(label);
+		root.setBackground(new Background(new BackgroundFill(Color.RED, CornerRadii.EMPTY, Insets.EMPTY)));	//Setting panel colors
+		
+		Scene scene = new Scene(root, 500, 400); //Setting window size
+		primaryStage.setTitle("ckc. ver. 1.0"); ////Setting window title
+		primaryStage.setX(249);	//Setting window appears X coordinate
+		primaryStage.setY(135);	//Setting window appears Y coordinate
+		primaryStage.setScene(scene);
+		primaryStage.show();
+	}
+
+	public static void main(String[] args) {
+		launch(args);
+	}
+}
